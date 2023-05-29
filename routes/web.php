@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FaqController;
+use App\Http\Controllers\RescueController;
+use App\Http\Controllers\VehicleController;
 
 Route::get('/', function () {
     return redirect()->route('login');
@@ -13,9 +15,24 @@ Route::get('/', function () {
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/rescue-request', [RescueController::class, 'index'])->middleware(['auth', 'verified'])->name('rescue.request');
+Route::post('/rescue-new', [RescueController::class, 'new'])->middleware(['auth', 'verified'])->name('rescue.new');
+Route::put('/rescue-status', [RescueController::class, 'status'])->middleware(['auth', 'verified'])->name('rescue.status');
+
 Route::get('/notification', function () {
     return Inertia::render('Notification');
 })->middleware(['auth', 'verified'])->name('notification');
+
+Route::get('/maps', function () {
+    return Inertia::render('Maps');
+})->middleware(['auth', 'verified'])->name('maps');
+
+Route::get('/branch', function () {
+    return Inertia::render('Branch');
+})->middleware(['auth', 'verified'])->name('branch');
+
+Route::get('/vehicles-list', [VehicleController::class, 'index'])->middleware(['auth', 'verified'])->name('vehicles.list');
+Route::post('/vehicle-new', [VehicleController::class, 'new'])->middleware(['auth', 'verified'])->name('vehicle.new');
 
 Route::get('/team-list', function () {
     return Inertia::render('TeamList');

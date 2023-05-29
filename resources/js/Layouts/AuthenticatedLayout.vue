@@ -207,7 +207,7 @@ const showingNavigationDropdown = ref(false);
                 </h3>
                 <ul class="text-sm font-medium">
                     <li class="mb-4">
-                        <NavLink class="flex items-center justify-between" :href="route('dashboard')" :active="route().current('dashboard')">
+                        <NavLink class="flex items-center justify-between" :href="route('rescue.request')" :active="route().current('rescue.request')">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z" />
                             </svg>
@@ -229,7 +229,7 @@ const showingNavigationDropdown = ref(false);
                         </NavLink>
                     </li>
                     <li class="mb-4">
-                        <NavLink class="flex items-center justify-between" :href="route('dashboard')" :active="route().current('dashboard')">
+                        <NavLink class="flex items-center justify-between" :href="route('maps')" :active="route().current('maps')">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
                             <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
@@ -241,7 +241,7 @@ const showingNavigationDropdown = ref(false);
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink class="flex items-center justify-between" :href="route('dashboard')" :active="route().current('dashboard')">
+                        <NavLink class="flex items-center justify-between" :href="route('branch')" :active="route().current('branch')">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
                             </svg>
@@ -260,7 +260,7 @@ const showingNavigationDropdown = ref(false);
                 </h3>
                 <ul class="text-sm font-medium">
                     <li class="mb-4">
-                        <NavLink class="flex items-center gap-4" :href="route('dashboard')" :active="route().current('dashboard')">
+                        <NavLink class="flex items-center gap-4" :href="route('vehicles.list')" :active="route().current('vehicles.list')">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
                             </svg>
