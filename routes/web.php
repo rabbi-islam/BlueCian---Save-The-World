@@ -13,7 +13,12 @@ Route::get('/', function () {
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/video', function () {
+    return Inertia::render('Video');
+})->middleware(['auth', 'verified'])->name('video');
+
 Route::get('/faq', [FaqController::class, 'index'])->middleware(['auth', 'verified'])->name('faq');
+
 Route::get('/terms', function () {
     return Inertia::render('Terms');
 })->middleware(['auth', 'verified'])->name('terms');
