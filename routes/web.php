@@ -13,6 +13,18 @@ Route::get('/', function () {
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/notification', function () {
+    return Inertia::render('Notification');
+})->middleware(['auth', 'verified'])->name('notification');
+
+Route::get('/team-list', function () {
+    return Inertia::render('TeamList');
+})->middleware(['auth', 'verified'])->name('team.list');
+
+Route::get('/gallery', function () {
+    return Inertia::render('Gallery');
+})->middleware(['auth', 'verified'])->name('gallery');
+
 Route::get('/video', function () {
     return Inertia::render('Video');
 })->middleware(['auth', 'verified'])->name('video');
