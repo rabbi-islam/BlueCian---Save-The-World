@@ -5,6 +5,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\FaqController;
 
 Route::get('/', function () {
     return redirect()->route('login');
@@ -12,6 +13,7 @@ Route::get('/', function () {
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/faq', [FaqController::class, 'index'])->middleware(['auth', 'verified'])->name('faq');
 Route::get('/terms', function () {
     return Inertia::render('Terms');
 })->middleware(['auth', 'verified'])->name('terms');
